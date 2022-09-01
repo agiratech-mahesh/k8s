@@ -5,7 +5,7 @@ stage('docker') {
 stage('git ') {
    sh "git config --global  user.name agiratech-mahesh"
    sh "git config --global  user.email mahesh.m@agiratech.com"
-   sh "rm -rf snapdeal-k8s && git clone https://github.com/agiratech-mahesh/k8s.git "
+   sh "rm -rf k8s && git clone https://github.com/agiratech-mahesh/k8s.git "
 }
 stage('build') {
    sh " cp /home/ubuntu/workspace/k8s/k8s /home "
