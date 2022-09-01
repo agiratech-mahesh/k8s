@@ -8,7 +8,7 @@ stage('git ') {
    sh "rm -rf k8s && git clone https://github.com/agiratech-mahesh/k8s.git "
 }
 stage('build') {
-   sh " cp /home/ubuntu/workspace/k8s/k8s /home "
+   sh " cp -r /home/ubuntu/workspace/k8s/k8s /home "
    sh " cd /home/k8s "
    sh "docker build -t maheshagiratech/k8s ."
    sh "docker push maheshagiratech/k8s"
