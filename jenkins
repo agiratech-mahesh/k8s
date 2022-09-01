@@ -14,8 +14,8 @@ stage('build') {
    sh "docker push maheshagiratech/k8s"
  }
 stage('k8s deploy') {
-    sh "cd /home/ubuntu/workspace/k8/k8s "
-    sh " kubectl create -f deployment.yml "
-    sh " kubectl create -f service.yml "
+    sh '''cd /home/k8s
+          kubectl create -f deployment.yml 
+          kubectl create -f service.yml '''
 }
 }
